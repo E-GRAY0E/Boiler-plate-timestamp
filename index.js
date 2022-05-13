@@ -22,7 +22,7 @@ app.get("/", function (req, res) {
 // your first API endpoint... 
 app.get("/api/timestamp/:timestamp", function (req, res) {
   let timestamp = res.params.timestamp;
-  if (/\d{5,}/.test(dateString)){
+  if (timestamp.match(/\d{5,}/){
     timestamp = +timestamp;
   }
   let date = new Date(timestamp);
