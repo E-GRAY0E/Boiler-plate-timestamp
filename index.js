@@ -44,7 +44,7 @@ app.get("/api/timestamp/", (req, res) => {
   resObject['unix'] = new Date().getTime()
   resObject['utc'] = new Date().toUTCString()
   res.json(resObject);
-}
+});
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
